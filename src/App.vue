@@ -1,10 +1,8 @@
 <script setup>
   const navLinks = [
     {label: "Services", href: "#services", class: "navigation-bar__services", id: crypto.randomUUID()},
-    {label: "Know How", href: "#know-how", class: "navigation-bar__know-how", id: crypto.randomUUID()},
     {label: "Projects & References", href: "#projects-and-references", class: "navigation-bar__projects-and-references", id: crypto.randomUUID()},
     {label: "Our Company", href: "#our-company", class: "navigation-bar__our-company", id: crypto.randomUUID()},
-    {label: "Our Clients", href: "#our-clients", class: "navigation-bar__our-clients", id: crypto.randomUUID()},
     {label: "Careers", href: "#careers", class: "navigation-bar__careers", id: crypto.randomUUID()},
   ];
 
@@ -444,195 +442,6 @@
         </span>
       </div>
     </div>
-
-    <div class="expertise__lifecycle" id="know-how">
-      <header class="expertise__lifecycle-header">
-        <h2 class="expertise__lifecycle-title">
-          Benefit from Decades of Life Cycle Know How
-        </h2>
-        <p class="expertise__lifecycle-description">
-          Our decade-long permanent presence on cement plants helps us to design buildings today that will be ready for 
-          whatever tomorrow brings. With our comprehensive planning methodology and building life cycle experience we 
-          anticipate use changes, unexpected utilisation and lifetime expositions early on during planning. 
-          This allows us to design buildings that are flexible, long-lasting, and economically efficient.
-        </p>
-      </header>
-
-      <div class="expertise__lifecycle-slider step-slider">
-        <div class="step-slider__steps">
-          <button class="step-slider__step">
-            <span class="step-slider__step-index">01</span>
-            <span class="step-slider__step-description">
-              Comprehensive planning methodology includes life-cycle know how
-            </span>
-          </button>
-
-          <button class="step-slider__step is-active">
-            <span class="step-slider__step-index">02</span>
-            <span class="step-slider__step-description">
-              Greenfield. Brownfield. Ongoing Operation.
-            </span>
-          </button>
-
-          <button class="step-slider__step">
-            <span class="step-slider__step-index">03</span>
-            <span class="step-slider__step-description">
-              Reuse, rebuild, extend
-            </span>
-          </button>
-
-          <button class="step-slider__step">
-            <span class="step-slider__step-index">04</span>
-            <span class="step-slider__step-description">
-              Renovate, refurbish, revamp
-            </span>
-          </button>
-
-          <button class="step-slider__step">
-            <span class="step-slider__step-index">05</span>
-            <span class="step-slider__step-description">
-              Demolition
-            </span>
-          </button>
-        </div>
-
-        <div class="step-slider__stage">
-          <div class="step-slider__controls">
-            <button class="step-slider__control step-slider__control--prev"></button>
-            <button class="step-slider__control step-slider__control--next"></button>
-          </div>
-          <div class="step-slider__media">
-            <img src="#" alt="">
-          </div>
-          <div class="step-slider__content">
-            <h3 class="step-slider__title">
-              Comprehensive planning methodology includes life-cycle know how
-            </h3>
-            <p class="step-slider__text">
-              Our decade-long permanent presence on cement plants allows us to anticipate use changes, unexpected 
-              utilisation and lifetime expositions early on during planning. This allows us to design buildings that 
-              are flexible, long-lasting and economically efficient.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="trust" id="our-clients">
-    <div class="trust__logos logo-slider">
-        <h2 class="logo-slider__title">
-          Key Players in the cement industry trust us.
-        </h2>
-
-        <div class="logo-slider__viewport">
-          <button class="logo-slider__control logo-slider__control--prev"></button>
-
-          <ul class="logo-slider__track">
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-            <li class="logo-slider__item">
-              <img src="#" alt="" class="logo-slider__item-logo">
-            </li>
-          </ul>
-
-          <button class="logo-slider__control logo-slider__control--next"></button>
-        </div>
-      </div>
-
-      <div class="trust__testimonials testimonial-slider">
-        <header class="testimonial-slider__intro">
-          <h3 class="testimonial-slider__title">
-            What clients say.
-          </h3>
-          <p class="testimonial-slider__description">
-            Aenean mauris duis sed congue magna scelerisque dolor eget in. Euismod eros, in cursus aliquam.
-          </p>
-        </header>
-
-        <div class="testimonial-slider__pagination">
-          <button class="testimonial-slider__dot testimonial-slider__dot--active"></button>
-          <button class="testimonial-slider__dot"></button>
-          <button class="testimonial-slider__dot"></button>
-          <button class="testimonial-slider__dot"></button>
-          <button class="testimonial-slider__dot"></button>
-        </div>
-
-        <div class="testimonial-slider__stage">
-          <article
-            v-for="(testimonial, index) in testimonials"
-            :key="testimonial.id"
-            class="testimonial-slider__slide"
-            :class="{'testimonial-slider__slide--active' : index === activeIndex}" 
-          >
-            <div class="testimonial-slider__logo">
-              <img
-                :src="testimonial.logo"
-                :alt="testimonial.alt"
-              />
-            </div>
-
-            <blockquote class="testimonial-slider__text">
-              {{ testimonial.text }}
-            </blockquote>
-
-            <div class="testimonial-slider__author">
-              <span class="testimonial-slider__name">
-                {{ testimonial.author.name }}
-              </span>
-              <span class="testimonial-slider__position">
-                {{ testimonial.author.position }}
-              </span>
-            </div>
-          </article>
-        </div>
-
-        <div class="testimonial-slider__controls">
-          <button class="testimonial-slider__control testimonial-slider__control--prev"></button>
-          <button class="testimonial-slider__control testimonial-slider__control--next"></button>
-        </div>
-      </div>
-
   </section>
   
   <section class="about" id="our-company">
@@ -1018,6 +827,9 @@
     color: #06255B;
   }
 
+  .services {
+    position: relative;
+  }
   .services__intro   {
     margin-left: 287px;
     margin-top: 96px;
@@ -1038,7 +850,11 @@
     letter-spacing: 0.3px;
   }
   .services__viewport {
-    transform: translateX(50px) translateY(-180px);
+    margin-top: -360px;
+    transform: translateX(-15px);
+
+    
+    padding: 169px 0 105px 0;
   }
   .services__list {
     display: grid;
@@ -1124,6 +940,7 @@
   .services__scroll-hint {
     display: flex;
     justify-content: center;
+    margin-top: 39px;
   }
   .scroll-hint__text {
     display: flex;
