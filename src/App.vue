@@ -297,362 +297,364 @@
 </script>
 
 <template>
-  <header class="header">
-    <nav class="header__navigation-bar navigation-bar">
-      <img src="@/assets/header/svg/logo.svg" alt="logo" class="header__logo">
-      <div class="navigation-bar__links">
-        <a
-          v-for="link in navLinks"
-          :key="link.id"
-          :href="link.href"
-          :class="link.class"
-          class="navigation-bar__link link"
-        >
-          {{ link.label }}
-        </a>
+  <div class="page-wrapper">
+    <header class="header">
+      <nav class="header__navigation-bar navigation-bar">
+        <img src="@/assets/header/svg/logo.svg" alt="logo" class="header__logo">
+        <div class="navigation-bar__links">
+          <a
+            v-for="link in navLinks"
+            :key="link.id"
+            :href="link.href"
+            :class="link.class"
+            class="navigation-bar__link link"
+          >
+            {{ link.label }}
+          </a>
+          
+        </div>
+        <div class="navigation-bar__actions">
+          <a class="navigation-bar__contact-us-btn btn contact-us-btn" href="#">
+            Contact Us
+          </a>
+          <div class="navigation-bar__change-lang-buttons">
+            <button
+              @click="setLanguage('de')"
+              class="navigation-bar__German-lang-btn navigation-bar__change-lang-button"
+              data-active="false"
+            ><span>De.</span></button>
+            <button
+              @click="setLanguage('en')"
+              class="navigation-bar__English-lang-btn navigation-bar__change-lang-button"
+              data-active="true"
+            ><span>En.</span></button>
+            <button
+              @click="setLanguage('fr')"
+              class="navigation-bar__French-lang-btn navigation-bar__change-lang-button"
+              data-active="false"
+            ><span>Fr.</span></button>
+          </div>
+        </div>
         
-      </div>
-      <div class="navigation-bar__actions">
-        <a class="navigation-bar__contact-us-btn btn contact-us-btn" href="#">
-          Contact Us
-        </a>
-        <div class="navigation-bar__change-lang-buttons">
-          <button
-            @click="setLanguage('de')"
-            class="navigation-bar__German-lang-btn navigation-bar__change-lang-button"
-            data-active="false"
-          ><span>De.</span></button>
-          <button
-            @click="setLanguage('en')"
-            class="navigation-bar__English-lang-btn navigation-bar__change-lang-button"
-            data-active="true"
-          ><span>En.</span></button>
-          <button
-            @click="setLanguage('fr')"
-            class="navigation-bar__French-lang-btn navigation-bar__change-lang-button"
-            data-active="false"
-          ><span>Fr.</span></button>
+      </nav>
+      <div class="hero">
+        <div class="container">
+          <h1 class="hero__title">
+            Civil <span class="hero__emphasis">Engineering Solutions</span>
+          </h1>
+          <p class="hero__subtitle">
+            For The <span class="hero__emphasis">Cement</span> Industry
+          </p>
         </div>
-      </div>
-      
-    </nav>
-    <div class="hero">
-      <div class="container">
-        <h1 class="hero__title">
-          Civil <span class="hero__emphasis">Engineering Solutions</span>
-        </h1>
-        <p class="hero__subtitle">
-          For The <span class="hero__emphasis">Cement</span> Industry
-        </p>
-      </div>
-      <div class="hero__text">
-        <p class="hero__text-item">
-          We are your leading partner for complex brownfield construction projects during ongoing operation.
-        </p>
-        <p class="hero__text-item">
-          Benefit from engineering excellence built on more than 30 years of industry experience.
-        </p>
-      </div>
-      <div class="hero__actions">
-        <a href="#" class="hero__button hero__button--secondary">
-          How can we serve you
-        </a>
-        <a href="#" class="hero__button hero__button--primary">
-          Contact Us
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <section class="services" id="services">
-    <div class="services__intro">
-      <h2 class="services__title">
-        Comprehensive Structural Engineering Services
-      </h2>
-      <p class="services__description">
-        We accompany you from the first idea of your next construction project from the first idea to successful execution.
-      </p>
-    </div>
-    <div class="services__viewport">
-      <div class="services__list">
-        <div
-          v-for="item in servicesItems"
-          :key="item.id"
-          class="services__item"
-          :data-area="item.gridArea"
-          :data-type="item.type + '-block'"
-        >
-        <div class="services__item-viewport">
-            <template
-            v-if="item.type === 'text'">
-              <div class="services__label">
-                <span
-                  v-for="(line, i) in item.lines"
-                  :key="i"
-                  class="services__label-line"
-                >
-                  {{ line }}
-                </span>
-              </div>
-          </template>
-          <img
-            v-else-if="item.type === 'image'"
-            :src="item.src"
-            alt=""
-            aria-hidden="true"
-            class="services__image"
-          />  
+        <div class="hero__text">
+          <p class="hero__text-item">
+            We are your leading partner for complex brownfield construction projects during ongoing operation.
+          </p>
+          <p class="hero__text-item">
+            Benefit from engineering excellence built on more than 30 years of industry experience.
+          </p>
         </div>
-            
+        <div class="hero__actions">
+          <a href="#" class="hero__button hero__button--secondary">
+            How can we serve you
+          </a>
+          <a href="#" class="hero__button hero__button--primary">
+            Contact Us
+          </a>
         </div>
-      </div>
-    </div>
-    
-    <div class="services__scroll-hint scroll-hint">
-      <div class="scroll-hint__text">
-        <span class="scroll-hint__text-line">Scroll to find out how our</span>
-        <span class="scroll-hint__text-line">expertise can help you</span>
-      </div>
-    </div>
-  </section>
-  
-  <section class="expertise" id="projects-and-references">
-    <header class="expertise__intro">
-      <div class="expertise__intro-container">
-        <h2 class="expertise__title">
-          Broad expertise based on decades of experience
-        </h2>
-        <p class="expertise__description">
-          Our services include all types of construction projects that you encounter.
-        </p>
       </div>
     </header>
 
-    <div class="expertise__areas">
-      <div
-        v-for="area in expertiseAreas"
-        :key="area.id"
-        class="expertise__area"
-      >
-        <span class="expertise__area-index">
-          {{ area.id }}
-        </span>
-        <span class="expertise__area-text">
-          {{ area.text }}
-        </span>
-      </div>
-    </div>
-  </section>
-  
-  <section class="about" id="our-company">
-    <div class="about__values">
-      <header class="about__values-intro">
-        <span class="about__values-eyebrow">
-          Holistic. Agile. Reliable
-        </span>
-
-        <h2 class="about__values-title">
-          With this triad we line up to support you to realize your projects successfully. 
+    <section class="services" id="services">
+      <div class="services__intro">
+        <h2 class="services__title">
+          Comprehensive Structural Engineering Services
         </h2>
-
-        <div class="about__values-description">
-          <p>
-            Today’s construction projects are notable for the diversity of their requirements. While you want your 
-            buildings to be safe, economical, and durable, they primarily serve your operations. Our deep industry 
-            knowledge helps to optimally incorporate the variety of usage requirements of the cement production processes 
-            into civil design.
-          </p>
-          <p>
-            We constantly achieve client success by following these three core values for all projects our clients 
-            trust us with.
-          </p>
-        </div>
-
-      </header>
-
-      <ul class="about__values-list">
-        <li class="about__value">
-          <h3 class="about__value-title">
-            Holistic planning
-          </h3>
-          <p class="about__value-description">
-            Through continuous consideration of all circumstances, we create futureproof buildings and frictionless 
-            construction workflows. Systematic implementation of this holistic approach helps us to keep the bird’s-eye 
-            view over all interfaces. We are proactively making sure that all included parties can focus on working 
-            towards the optimal project result.
-          </p>
-        </li>
-        
-        <li class="about__value">
-          <h3 class="about__value-title">
-            Agile acting
-          </h3>
-          <p class="about__value-description">
-            Our team can put results down on paper rapidly. In a world that is increasingly characterized by changing 
-            and adapting to uncertain circumstances, we can flexibly execute on multiple iterations of the project in 
-            close consultation with the client. This allows us to cater to your construction needs until the last 
-            phases of planning.
-          </p>
-        </li>
-
-        <li class="about__value">
-          <h3 class="about__value-title">
-            Reliable realisation.
-          </h3>
-          <p class="about__value-description">
-            We prioritize project success over everything. Based on our decades of experience we have developed the 
-            highest quality standards and demonstrate with every new project our commitment to meeting and exceeding 
-            client expectations. 
-          </p>
-        </li>
-      </ul>
-    </div>
-
-    <div class="about__team" id="careers">
-      <header class="about__team-intro">
-        <h2 class="about__team-title">
-          Meet the Team
-        </h2>
-        <p class="about__team-subtitle">
-          These are the experts that turn ideas into reality
+        <p class="services__description">
+          We accompany you from the first idea of your next construction project from the first idea to successful execution.
         </p>
-      </header>
-
-      <section class="about__team-group about__team-group--leadership">
-        <h3 class="about__team-title">
-          Leadership Team
-        </h3>
-        <ul class="about__team-list team">
-          <li class="team__member">
-            <img src="#" alt="" class="team__member-avatar">
-            <h4 class="team__member-name">
-              Tim-Nicolas Mollenhauer
-            </h4>
-            <span class="team__member-position">
-              CEO
-            </span>
-            <p class="team__member-bio">
-              Viverra in turpis vitae tincidunt. Odio nunc netus consectetur libero duis. Est quis vitae, sed egestas 
-              vehicula.
-            </p>
-            <a href="#" class="team__member-linked-in"></a>
-          </li>
-
-          <li class="team__member">
-            <img src="#" alt="" class="team__member-avatar">
-            <h4 class="team__member-name">
-              Klaus-Dieter Mollenhauer
-            </h4>
-            <span class="team__member-position">
-              Creative Director
-            </span>
-            <p class="team__member-bio">
-              Duis aenean ultricies ullamcorper neque cras vel. Quam sem turpis est morbi nunc odio feugiat 
-              pellentesque. Eget risus lectus donec tempus cras. Amet amet, auctor habitasse tristique pellentesque 
-              id velit.
-            </p>
-            <a href="#" class="team__member-linked-in"></a>
-          </li>
-        </ul>
-
-      </section>
-
-      <section 
-        v-for="group in groups"
-        :key="group.id"
-        class="about__team-group"
-        :class="'about__team-' + group.class"
-      >
-        <h3 class="about__team-title">
-          {{ group.title }}
-        </h3>
-
-        <ul class="about__team-list team">
-          <li
-            v-for="member in group.members"
-            :key="member.id"
-            class="team__member"
+      </div>
+      <div class="services__viewport">
+        <div class="services__list">
+          <div
+            v-for="item in servicesItems"
+            :key="item.id"
+            class="services__item"
+            :data-area="item.gridArea"
+            :data-type="item.type + '-block'"
           >
+          <div class="services__item-viewport">
+              <template
+              v-if="item.type === 'text'">
+                <div class="services__label">
+                  <span
+                    v-for="(line, i) in item.lines"
+                    :key="i"
+                    class="services__label-line"
+                  >
+                    {{ line }}
+                  </span>
+                </div>
+            </template>
             <img
-              :src="member.avatar"
+              v-else-if="item.type === 'image'"
+              :src="item.src"
               alt=""
               aria-hidden="true"
-              class="team__member-avatar"
-            />
-            <h4 class="team__member-name">
-              {{ member.name }}
-            </h4>
-            <a v-if="member.cta" class="team__member-apply-button" :href="member.cta.link">{{ member.cta.label }}</a>
-            <span class="team__member-position">
-              {{ member.position }}
-            </span>
+              class="services__image"
+            />  
+          </div>
+              
+          </div>
+        </div>
+      </div>
+      
+      <div class="services__scroll-hint scroll-hint">
+        <div class="scroll-hint__text">
+          <span class="scroll-hint__text-line">Scroll to find out how our</span>
+          <span class="scroll-hint__text-line">expertise can help you</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="expertise" id="projects-and-references">
+      <header class="expertise__intro">
+        <div class="expertise__intro-container">
+          <h2 class="expertise__title">
+            Broad expertise based on decades of experience
+          </h2>
+          <p class="expertise__description">
+            Our services include all types of construction projects that you encounter.
+          </p>
+        </div>
+      </header>
+
+      <div class="expertise__areas">
+        <div
+          v-for="area in expertiseAreas"
+          :key="area.id"
+          class="expertise__area"
+        >
+          <span class="expertise__area-index">
+            {{ area.id }}
+          </span>
+          <span class="expertise__area-text">
+            {{ area.text }}
+          </span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about" id="our-company">
+      <div class="about__values">
+        <header class="about__values-intro">
+          <span class="about__values-eyebrow">
+            Holistic. Agile. Reliable
+          </span>
+
+          <h2 class="about__values-title">
+            With this triad we line up to support you to realize your projects successfully. 
+          </h2>
+
+          <div class="about__values-description">
+            <p>
+              Today’s construction projects are notable for the diversity of their requirements. While you want your 
+              buildings to be safe, economical, and durable, they primarily serve your operations. Our deep industry 
+              knowledge helps to optimally incorporate the variety of usage requirements of the cement production processes 
+              into civil design.
+            </p>
+            <p>
+              We constantly achieve client success by following these three core values for all projects our clients 
+              trust us with.
+            </p>
+          </div>
+
+        </header>
+
+        <ul class="about__values-list">
+          <li class="about__value">
+            <h3 class="about__value-title">
+              Holistic planning
+            </h3>
+            <p class="about__value-description">
+              Through continuous consideration of all circumstances, we create futureproof buildings and frictionless 
+              construction workflows. Systematic implementation of this holistic approach helps us to keep the bird’s-eye 
+              view over all interfaces. We are proactively making sure that all included parties can focus on working 
+              towards the optimal project result.
+            </p>
+          </li>
+          
+          <li class="about__value">
+            <h3 class="about__value-title">
+              Agile acting
+            </h3>
+            <p class="about__value-description">
+              Our team can put results down on paper rapidly. In a world that is increasingly characterized by changing 
+              and adapting to uncertain circumstances, we can flexibly execute on multiple iterations of the project in 
+              close consultation with the client. This allows us to cater to your construction needs until the last 
+              phases of planning.
+            </p>
+          </li>
+
+          <li class="about__value">
+            <h3 class="about__value-title">
+              Reliable realisation.
+            </h3>
+            <p class="about__value-description">
+              We prioritize project success over everything. Based on our decades of experience we have developed the 
+              highest quality standards and demonstrate with every new project our commitment to meeting and exceeding 
+              client expectations. 
+            </p>
           </li>
         </ul>
-      </section>
-    </div>
-  </section>
+      </div>
 
-  <footer class="footer">
-    <div class="footer__main">
-      <img src="#" alt="brand image" class="footer__brand">
-
-      <address class="footer__contacts">
-        <span class="footer__contacts-title">Contacts::</span>
-
-        <div class="footer__contact-data">
-          <p>
-            Erwitter Str. 40<br>
-            59590 Geseke<br>    
-            GERMANY
+      <div class="about__team" id="careers">
+        <header class="about__team-intro">
+          <h2 class="about__team-title">
+            Meet the Team
+          </h2>
+          <p class="about__team-subtitle">
+            These are the experts that turn ideas into reality
           </p>
-          
-          <a href="tel:+492942978371"></a>
-          <a href="mailto:info@m-bp.de">info@m-bp.de</a>
+        </header>
+
+        <section class="about__team-group about__team-group--leadership">
+          <h3 class="about__team-title">
+            Leadership Team
+          </h3>
+          <ul class="about__team-list team">
+            <li class="team__member">
+              <img src="#" alt="" class="team__member-avatar">
+              <h4 class="team__member-name">
+                Tim-Nicolas Mollenhauer
+              </h4>
+              <span class="team__member-position">
+                CEO
+              </span>
+              <p class="team__member-bio">
+                Viverra in turpis vitae tincidunt. Odio nunc netus consectetur libero duis. Est quis vitae, sed egestas 
+                vehicula.
+              </p>
+              <a href="#" class="team__member-linked-in"></a>
+            </li>
+
+            <li class="team__member">
+              <img src="#" alt="" class="team__member-avatar">
+              <h4 class="team__member-name">
+                Klaus-Dieter Mollenhauer
+              </h4>
+              <span class="team__member-position">
+                Creative Director
+              </span>
+              <p class="team__member-bio">
+                Duis aenean ultricies ullamcorper neque cras vel. Quam sem turpis est morbi nunc odio feugiat 
+                pellentesque. Eget risus lectus donec tempus cras. Amet amet, auctor habitasse tristique pellentesque 
+                id velit.
+              </p>
+              <a href="#" class="team__member-linked-in"></a>
+            </li>
+          </ul>
+
+        </section>
+
+        <section 
+          v-for="group in groups"
+          :key="group.id"
+          class="about__team-group"
+          :class="'about__team-' + group.class"
+        >
+          <h3 class="about__team-title">
+            {{ group.title }}
+          </h3>
+
+          <ul class="about__team-list team">
+            <li
+              v-for="member in group.members"
+              :key="member.id"
+              class="team__member"
+            >
+              <img
+                :src="member.avatar"
+                alt=""
+                aria-hidden="true"
+                class="team__member-avatar"
+              />
+              <h4 class="team__member-name">
+                {{ member.name }}
+              </h4>
+              <a v-if="member.cta" class="team__member-apply-button" :href="member.cta.link">{{ member.cta.label }}</a>
+              <span class="team__member-position">
+                {{ member.position }}
+              </span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__main">
+        <img src="#" alt="brand image" class="footer__brand">
+
+        <address class="footer__contacts">
+          <span class="footer__contacts-title">Contacts::</span>
+
+          <div class="footer__contact-data">
+            <p>
+              Erwitter Str. 40<br>
+              59590 Geseke<br>    
+              GERMANY
+            </p>
+            
+            <a href="tel:+492942978371"></a>
+            <a href="mailto:info@m-bp.de">info@m-bp.de</a>
+          </div>
+
+          <nav class="footer__socials" aria-label="Social media">
+            <span class="footer__socials-title">
+              Our Social Media:
+            </span>
+            <a href="#" aria-label="Instagram">
+              <img src="#" alt="Ig">
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <img src="#" alt="Fb">
+            </a>
+          </nav>
+        </address>
+
+        <div class="footer__map">
+          <iframe
+            :src="'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5958.890949578584!2d37.6095974545526' +
+                  '!3d55.7722476417638!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sde!4v1769330971463!5m2!1sru!2sde'"
+            width="800"
+            height="600"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <a href="#" class="footer__imprint">Imprint</a>
+          <a href="#" class="footer__data-privacy">Data Privacy</a>
         </div>
 
-        <nav class="footer__socials" aria-label="Social media">
-          <span class="footer__socials-title">
-            Our Social Media:
-          </span>
-          <a href="#" aria-label="Instagram">
-            <img src="#" alt="Ig">
-          </a>
+        <div class="footer__copyright">
+          Copyright : mbp | Mollenhauer Beraten & Planen GmbH
+        </div>
 
-          <a href="#" aria-label="Facebook">
-            <img src="#" alt="Fb">
-          </a>
-        </nav>
-      </address>
-
-      <div class="footer__map">
-        <iframe
-          :src="'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5958.890949578584!2d37.6095974545526' +
-                '!3d55.7722476417638!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sde!4v1769330971463!5m2!1sru!2sde'"
-          width="800"
-          height="600"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <div class="footer__tagline">
+          Consulting & Structural Engineering Design
+        </div>
       </div>
-    </div>
-
-    <div class="footer__bottom">
-      <div class="footer__legal">
-        <a href="#" class="footer__imprint">Imprint</a>
-        <a href="#" class="footer__data-privacy">Data Privacy</a>
-      </div>
-
-      <div class="footer__copyright">
-        Copyright : mbp | Mollenhauer Beraten & Planen GmbH
-      </div>
-
-      <div class="footer__tagline">
-        Consulting & Structural Engineering Design
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
@@ -668,8 +670,13 @@
     cursor: pointer;
   }
 
+  .page-wrapper {
+    max-width: 1728px;
+    margin: 0 auto;
+  }
   .header {
     height: 1223px;
+    background-color: #06255B
   }
   .header__logo {
     margin-top: 37px;
@@ -763,6 +770,7 @@
   .hero {
     margin-left: 166px;
     margin-top: 196px;
+    
   }
   .hero__title, .hero__subtitle {
     font-weight: 400;
@@ -833,6 +841,8 @@
   .services__intro   {
     margin-left: 287px;
     margin-top: 96px;
+    max-width: fit-content;
+    background-color: #06255B;
   }
   .services__title {
     max-width: 408px;
@@ -851,10 +861,9 @@
   }
   .services__viewport {
     margin-top: -360px;
-    transform: translateX(-15px);
-
-    
-    padding: 169px 0 105px 0;
+    max-width: 1440px;
+    transform: translateX(13px);
+    padding: 218px 0 46px 0;
   }
   .services__list {
     display: grid;
