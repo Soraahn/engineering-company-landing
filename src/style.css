@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -21,4 +21,14 @@
 body {
   overflow-x: hidden;
   background-color: #F7F9FC;
+  font-family: 'Source Sans Pro';
+  color: black;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  button {
+    all: unset;
+    cursor: pointer;
+  }
