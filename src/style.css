@@ -19,7 +19,6 @@
 }
 
 body {
-  overflow-x: hidden;
   background-color: #F7F9FC;
   font-family: 'Source Sans Pro';
   color: black;
@@ -31,4 +30,7 @@ a {
   button {
     all: unset;
     cursor: pointer;
+  }
+  ul {
+    list-style: none;
   }

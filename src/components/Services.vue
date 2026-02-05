@@ -97,6 +97,7 @@
     letter-spacing: 0.3px;
   }
   .services__viewport {
+    overflow: hidden;
     margin-top: -360px;
     max-width: 1440px;
     transform: translateX(25px);
@@ -104,6 +105,7 @@
   }
   .services__list {
     display: grid;
+    min-width: 0;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
