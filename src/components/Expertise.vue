@@ -71,17 +71,33 @@
   .expertise__areas {
     margin-top: 51px;
     height: 488px;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .expertise__areas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background: url("@/assets/expertise/svg/expertise-areas-background.svg") no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom center;
+    pointer-events: none;
   }
   .expertise__area {
     padding: 55px 37px;
     position: relative;
     border: solid 1px #E2E2E2;
+
   }
   .expertise__area * {
     position: relative;
     z-index: 1;
+    transition: 0.3s ease;
   }
   .expertise__area::before {
     content: '';
@@ -92,6 +108,7 @@
     background-size: auto 100%;
     background-position: 55% center;
     opacity: 0;
+    transition: 0.3s ease;
   }
   .expertise__area:hover::before {
     opacity: 1;
@@ -104,22 +121,37 @@
     letter-spacing: 0.3px;
     color: #DA5D24;
   }
+  .expertise__area-index::before,
   .expertise__area-index::after {
     content: '';
-    display: block;
-    width: 13px;
-    height: 13px;
-    margin-left: 21px;
-    background: url('@/assets/expertise/svg/area-index-icon.svg') center / contain no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    transform: translateX(16px) translateY(13px);
+    transition: 0.3s ease;
+  }
+  .expertise__area-index::after {
+    opacity: 1;
+    background: url('@/assets/expertise/svg/area-index-icon-centered.svg') no-repeat;
+  }
+  .expertise__area-index::before {
+    opacity: 0;
+    background: url('@/assets/expertise/svg/area-index-icon-hover-centered.svg') no-repeat;
+  }
+  .expertise__area:hover .expertise__area-index::after {
+    opacity: 0;
+  }
+  .expertise__area:hover .expertise__area-index::before {
+    opacity: 1;
   }
   .expertise__area:hover .expertise__area-index{
     color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .expertise__area:hover .expertise__area-index::after {
-    background: url('@/assets/expertise/svg/area_index_icon-hover.svg') center / contain no-repeat;
-    width: 18px;
-    height: 18px;
-    transform: translateX(-3px) translateY(-0.1px);
+    background: url('@/assets/expertise/svg/area-index-icon-hover-centered.svg') no-repeat;
   }
   .expertise__area-text {
     display: inline-block;
@@ -133,5 +165,6 @@
   }
   .expertise__area:hover .expertise__area-text {
     color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 </style>

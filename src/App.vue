@@ -86,27 +86,27 @@
 
   const expertiseAreas = [
     {
-      id: '1',
+      id: '01',
       text: 'Civil engineering'
     },
     {
-      id: '2',
+      id: '02',
       text: 'Machine and building foundations'
     },
     {
-      id: '3',
+      id: '03',
       text: 'Silo and slipform construction'
     },
     {
-      id: '4',
+      id: '04',
       text: 'Assesments, building inspection, concrete maintenance and repair'
     },
     {
-      id: '5',
+      id: '05',
       text: 'International cement factory construction'
     },
     {
-      id: '6',
+      id: '06',
       text: 'Construction in ongoing operations'
     },
   ];
