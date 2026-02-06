@@ -26,11 +26,14 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-  }
-  button {
-    all: unset;
-    cursor: pointer;
-  }
-  ul {
-    list-style: none;
-  }
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+div {
+  z-index: 1;
+}
