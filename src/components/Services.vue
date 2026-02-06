@@ -175,6 +175,9 @@
   .services__item[data-area="b"] {
     grid-area: b;
   }
+  .services__item[data-area="b"] img {
+    transform: translateX(-100px) translateY(100px);
+  }
   .services__item[data-area="c"] {
     grid-area: c;
   }
@@ -189,11 +192,14 @@
   }
   .services__item[data-area="g"] {
     grid-area: g;
+    position: relative;
+    z-index: 1;
+  }
+  .services__item[data-area="g"] img {
+    transform: translateX(80px);
   }
   .services__item[data-area="h"] {
     grid-area: h;
-    position: relative;
-    z-index: 1;
   }
   .services__item[data-area="g"]::before {
     content: '';
