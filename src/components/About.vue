@@ -229,8 +229,7 @@
             </li>
           </ul>
         </section>
-      </div>
-      
+      </div>  
     </div>
   </section>
 </template>
@@ -253,12 +252,10 @@
   }
   .about__values-heading::after {
     content: '';
-
     margin-top: 40px;
     width: 100%;
     height: 100%;
     display: block;
-
     background: url('@/assets/about/svg/Arrow 3.svg') no-repeat;
   }
   .about__values-eyebrow {
@@ -276,7 +273,6 @@
     font-size: 32px;
     line-height: 100%;
     letter-spacing: -1px;
-
     color: #DA5D24;
   }
   .about__values-description {
@@ -350,7 +346,6 @@
   .about__team-subtitle {
     margin-top: 40px;
     max-width: 445px;
-
     font-weight: 400;
     font-style: Regular;
     font-size: 32px;
@@ -377,7 +372,6 @@
     line-height: 100%;
     letter-spacing: 0px;
     color: #0E0E0C;
-
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     align-self: end;
@@ -386,13 +380,10 @@
     content: "";
     position: absolute;
     z-index: -1;
-
     top: -5px;
     bottom: 75.4%;
-
     left: 6px;
     right: 9px;
-
     background: #FF7C40;
   }
   .team {
@@ -408,7 +399,6 @@
     content: '';
     width: 100%;
     height: 1px;
-
     background: repeating-linear-gradient(
       to right,
       #2F3034 0 8px,
@@ -425,7 +415,6 @@
     width: 100%;
     height: 1px;
     margin-top: 52px;
-
     background: repeating-linear-gradient(
       to right,
       #2F3034 0 8px,
@@ -442,14 +431,10 @@
   .team__member-decorated::after {
     content: "";
     position: absolute;
-
-    /* подгоняешь под макет */
-    left: 163px;   /* примерно где начинается аватар */
+    left: 163px;
     top: 42px;
-
     width: 64px;
     height: 174px;
-
     background: #FF7C40;
     transform: skewX(-10deg);
     z-index: 0;
@@ -471,15 +456,11 @@
     content: "";
     position: absolute;
     z-index: -1;
-
     right: -30px;
     top: 155px;
-
     width: 64px;
     height: 190px;
-
     background: #DA5D24;
-
     clip-path: polygon(
       0% 5%,
       100% 0%,
@@ -491,20 +472,16 @@
     content: "";
     position: absolute;
     z-index: -1;
-
     left: 30px;
     bottom: -30px;
-
     width: 200px;
     height: 48px;
-
     background: #0D2B7A;
-
     clip-path: polygon(
-      3% 20%,    /* верх-лево */
-      100% 0%,   /* верх-право */
-      100% 30%,  /* низ-право */
-      0% 100%     /* низ-лево */
+      3% 20%,
+      100% 0%,
+      100% 30%,
+      0% 100%
     );
   }
   .team__member-avatar--leadership {
@@ -538,13 +515,13 @@
     justify-content: center;
     align-items: center;
     background-color: #FF7C40;
-
     font-weight: 600;
     font-style: SemiBold;
     font-size: 13px;
     line-height: 120%;
     letter-spacing: 0px;
     color: white;
+    transition: 0.3s ease;
   }
   .team__member-apply-button:hover {
     background-color: #DA5D24;
@@ -576,9 +553,7 @@
     display: inline-flex;
     align-items: center;
     gap: 16px;
-
     max-width: 210px;
-
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
@@ -587,14 +562,12 @@
   }
   .team__member-position::before {
     content: '';
-
     min-width: 21px;
     height: 16px;
     background: url('@/assets/about/svg/Arrow 4.svg') no-repeat;
   }
   .team__member-bio {
     margin-top: 16px;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -607,7 +580,6 @@
   .team__member-bio--creative-director {
     max-width: 259px;
   }
-
   .team__member-linked-in {
     margin-top: 34px;
     display: inline-block;
@@ -615,6 +587,7 @@
   }
   .team__member-icon {
     position: absolute;
+    transition: 0.2s ease;
   }
   .team__member-linked-in:hover .team__member-icon--default {
     opacity: 0;
