@@ -101,7 +101,7 @@
         </h3>
         <ul class="about__team-list team team--leadership">
           <li class="team__member team__member--leadership">
-            <div class="team__member-avatar team__member-avatar--leadership">
+            <div class="team__member-avatar team__member-avatar--leadership team__member-avatar--ceo">
               <img
                 src="@/assets/about/png/leonardo dicaprio.png"
                 alt=""
@@ -137,7 +137,7 @@
           </li>
 
           <li class="team__member team__member--leadership">
-            <div class="team__member-avatar team__member-avatar--leadership">
+            <div class="team__member-avatar team__member-avatar--leadership team__member-avatar--creative">
               <img
                 src="@/assets/about/png/Ben Stiller.png"
                 alt=""
@@ -177,7 +177,7 @@
 
       <div class="about__team-groups">
         <section 
-          v-for="group in groups"
+          v-for="(group, groupIndex) in groups"
           :key="group.id"
           class="about__team-group"
           :class="'about__team-' + group.class"
@@ -188,9 +188,12 @@
 
           <ul class="about__team-list team">
             <li
-              v-for="member in group.members"
+              v-for="(member, memberIndex) in group.members"
               :key="member.id"
               class="team__member"
+              :class="{
+                'team__member-decorated' : groupIndex === groups.length - 1 && memberIndex === 0
+              }"
             >
               <img
                 :src="member.avatar"
@@ -335,7 +338,7 @@
     padding: 0 70px 0 147px;
   }
   .about__team-intro {
-    margin-left: 214px;
+    margin-left: 81px;
   }
   .about__team-title {
     font-weight: 700;
@@ -367,6 +370,7 @@
   .about__team-group-title {
     width: 40px;
     height: 345px;
+    position: relative;
     
     font-weight: 300;
     font-size: 32px;
@@ -377,6 +381,19 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     align-self: end;
+  }
+  .about__team-group-title::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    top: -5px;
+    bottom: 75.4%;
+
+    left: 6px;
+    right: 9px;
+
+    background: #FF7C40;
   }
   .team {
     margin-left: 44px;
@@ -419,6 +436,29 @@
     display: flex;
     flex-direction: column;
   }
+  .team__member-decorated{
+    position: relative;
+  }
+  .team__member-decorated::after {
+    content: "";
+    position: absolute;
+
+    /* подгоняешь под макет */
+    left: 163px;   /* примерно где начинается аватар */
+    top: 42px;
+
+    width: 64px;
+    height: 174px;
+
+    background: #FF7C40;
+    transform: skewX(-10deg);
+    z-index: 0;
+  }
+  .team__member-decorated .team__member-avatar,
+  .team__member-decorated .team__member-info {
+    position: relative;
+    z-index: 1;
+  }
   .team__member--leadership {
     flex-direction: row;
   }
@@ -426,15 +466,59 @@
     width: 215px;
     height: 216px;
   }
+ 
+  .team__member-avatar--ceo::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    right: -30px;
+    top: 155px;
+
+    width: 64px;
+    height: 190px;
+
+    background: #DA5D24;
+
+    clip-path: polygon(
+      0% 5%,
+      100% 0%,
+      53% 100%,
+      0% 92%
+    );
+  }
+  .team__member-avatar--creative::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    left: 30px;
+    bottom: -30px;
+
+    width: 200px;
+    height: 48px;
+
+    background: #0D2B7A;
+
+    clip-path: polygon(
+      3% 20%,    /* верх-лево */
+      100% 0%,   /* верх-право */
+      100% 30%,  /* низ-право */
+      0% 100%     /* низ-лево */
+    );
+  }
   .team__member-avatar--leadership {
+    position: relative;
     width: 287px;
     height: 345px;
-    overflow: hidden;
+    z-index: 0;
   }
   .team__member-avatar--leadership img {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 1;
   }
   .team__member-info {
     max-width: 216px;

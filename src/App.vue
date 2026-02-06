@@ -260,9 +260,7 @@
       :groups="groups"
     />
 
-    <Footer
-    
-    />
+    <Footer/>
   </div>
 </template>
 
