@@ -88,9 +88,36 @@
 
 <style scoped>
   .header {
-    height: 1223px;
+    position: relative;
+    overflow: hidden;
+    height: 1024px;
     color: white;
-    background-color: #06255B
+    background:
+      linear-gradient(to right, rgba(6, 37, 91, 1) 0%, rgba(6, 37, 91, 0) 60%),
+      linear-gradient(to bottom, rgba(6, 37, 91, 1) 0%, rgba(6, 37, 91, 0) 40%),
+      url("@/assets/header/jpg/background.jpg") center / cover no-repeat;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    right: 30px;
+    top: 200px;
+    width: 500px;
+    height: 500px;
+    background: url("@/assets/header/svg/Group 1201.svg") no-repeat;
+    background-size: auto;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 34px;
+    width: 1000px;
+    height: 1000px;
+    background: url("@/assets/header/svg/Group 2348.svg")no-repeat;
+    background-position: right top;
+    background-size: auto;
+    z-index: 100;
   }
   .header__logo {
     margin-top: 37px;
@@ -184,7 +211,26 @@
   .hero {
     margin-left: 166px;
     margin-top: 196px;
-    
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    right: 210px;
+    top: 402px;
+    width: 500px;
+    height: 500px;
+    background: url("@/assets/header/svg/Group 1200.svg") no-repeat;
+    background-size: auto;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: 49px;
+    top: 520px;
+    width: 500px;
+    height: 500px;
+    background: url("@/assets/header/svg/Group 1202.svg") no-repeat;
+    background-size: auto;
   }
   .hero__title, .hero__subtitle {
     font-weight: 400;
