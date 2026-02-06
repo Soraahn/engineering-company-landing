@@ -234,7 +234,7 @@
   import Services from '@/components/Services.vue';
   import Expertise from '@/components/Expertise.vue';
   import About from '@/components/About.vue';
-  import Footer from '@/components/Footer.vue';
+  import Footer from '@/components/Footer/Footer.vue';
 
 </script>
 
