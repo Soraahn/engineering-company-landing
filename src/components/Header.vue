@@ -97,6 +97,10 @@
       linear-gradient(to bottom, rgba(6, 37, 91, 1) 0%, rgba(6, 37, 91, 0) 40%),
       url("@/assets/header/jpg/background.jpg") center / cover no-repeat;
   }
+  .header > * {
+    position: relative;
+    z-index: 4;
+  }
   .header::before {
     content: '';
     position: absolute;
@@ -106,6 +110,7 @@
     height: 500px;
     background: url("@/assets/header/svg/Group 1201.svg") no-repeat;
     background-size: auto;
+    z-index: 0;
   }
   .header::after {
     content: '';
@@ -117,7 +122,7 @@
     background: url("@/assets/header/svg/Group 2348.svg")no-repeat;
     background-position: right top;
     background-size: auto;
-    z-index: 100;
+    z-index: 2;
   }
   .header__logo {
     margin-top: 37px;
@@ -135,6 +140,7 @@
     margin-top: 65px;
     display: flex;
     gap: 32px;
+    z-index: 4;
   }
   .navigation-bar__links a {
     font-weight: 400;
@@ -216,21 +222,23 @@
     content: '';
     position: absolute;
     right: 210px;
-    top: 402px;
+    top: 102px;
     width: 500px;
     height: 500px;
     background: url("@/assets/header/svg/Group 1200.svg") no-repeat;
     background-size: auto;
+    z-index: -1;
   }
   .hero::after {
     content: '';
     position: absolute;
     right: 49px;
-    top: 520px;
+    top: 220px;
     width: 500px;
     height: 500px;
     background: url("@/assets/header/svg/Group 1202.svg") no-repeat;
     background-size: auto;
+    z-index: -1;
   }
   .hero__title, .hero__subtitle {
     font-weight: 400;
