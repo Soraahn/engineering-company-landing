@@ -111,6 +111,15 @@
     },
   ];
 
+  const avatars = import.meta.glob('@/assets/about/png/*', {
+    eager: true,
+    import: 'default'
+  })
+
+  const getAvatar = (fileName) => {
+    const entry = Object.entries(avatars).find(([path]) => path.endsWith(`/${fileName}`));
+    return entry?.[1];
+  }
   const groups = [
     {
       id: 1,
@@ -119,31 +128,36 @@
       members: [
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Natalie Portman.png',
+          avatar: getAvatar('Natalie Portman.png'),
+          avatar: getAvatar('Natalie Portman.png'),
           name: 'Bernhard Meyer',
           position: 'Senior Steel Structures Engineer'
         },
         { 
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Emma Stone.png',
+          avatar: getAvatar('Emma Stone.png'),
+          avatar: getAvatar('Emma Stone.png'),
           name: 'Alexander Jung',
           position: 'Project Engineer'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Joaquin Phoenix.png',
+          avatar: getAvatar('Joaquin Phoenix.png'),
+          avatar: getAvatar('Joaquin Phoenix.png'),
           name: 'Stefan Schniedermeier',
           position: 'Project Engineer'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Jessica Chastain.png',
+          avatar: getAvatar('Jessica Chastain.png'),
+          avatar: getAvatar('Jessica Chastain.png'),
           name: 'Stefan Wiek',
           position: 'Project Engineer'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/you.png',
+          avatar: getAvatar('you.png'),
+          avatar: getAvatar('you.png'),
           name: 'You?',
           cta: {
             label: 'Apply Now',
@@ -160,37 +174,43 @@
       members: [
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Morgan Freeman.png',
+          avatar: getAvatar('Morgan Freeman.png'),
+          avatar: getAvatar('Morgan Freeman.png'),
           name: 'Domenik Schmidt',
           position: 'Head of Layout & Design'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Florence Pugh.png',
+          avatar: getAvatar('Florence Pugh.png'),
+          avatar: getAvatar('Florence Pugh.png'),
           name: 'Manuela Sonntag',
           position: 'Reinforcement Technician'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Natalie Portman.png',
+          avatar: getAvatar('Natalie Portman.png'),
+          avatar: getAvatar('Natalie Portman.png'),
           name: 'Mark Peters',
           position: 'Planning Permission Design'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Emma Stone.png',
+          avatar: getAvatar('Emma Stone.png'),
+          avatar: getAvatar('Emma Stone.png'),
           name: 'Katarina Maslanova',
           position: 'Structural Drawings'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Joaquin Phoenix.png',
+          avatar: getAvatar('Joaquin Phoenix.png'),
+          avatar: getAvatar('Joaquin Phoenix.png'),
           name: 'Benedikt Schröder-Schlüter',
           position: 'Structural Drawings'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Jessica Chastain.png',
+          avatar: getAvatar('Jessica Chastain.png'),
+          avatar: getAvatar('Jessica Chastain.png'),
           name: 'Michael Dick',
           position: 'Structural Drawings'
         },
@@ -203,13 +223,15 @@
       members: [
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Joaquin Phoenix.png',
+          avatar: getAvatar('Joaquin Phoenix.png'),
+          avatar: getAvatar('Joaquin Phoenix.png'),
           name: 'Najwa Hasan',
           position: 'Position'
         },
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Jessica Chastain.png',
+          avatar: getAvatar('Jessica Chastain.png'),
+          avatar: getAvatar('Jessica Chastain.png'),
           name: 'Leonie Kahr',
           position: 'Position'
         },
@@ -222,7 +244,8 @@
       members: [
         {
           id: crypto.randomUUID(),
-          avatar: 'src/assets/about/png/Florence Pugh.png',
+          avatar: getAvatar('Florence Pugh.png'),
+          avatar: getAvatar('Florence Pugh.png'),
           name: 'Michelle Michalik',
           position: 'Assistent to the Management'
         }
