@@ -1,5 +1,48 @@
-# Vue 3 + Vite
+# Engineering Company Landing
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Landing page for an engineering company (portfolio project).  
+Built with **Vue 3 + Vite**, based on a Figma design.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🔗 Live Demo
+
+https://soraahn.github.io/engineering-company-landing/
+
+## 🛠 Tech Stack
+
+- Vue 3
+- Vite
+- HTML5
+- CSS3 (scoped styles in components)
+- BEM methodology (class naming)
+- GitHub Pages (deploy)
+
+## 🚀 Getting Started
+
+Install dependencies:
+```bash
+npm install
+```
+
+Run locally:
+```bash
+npm run dev
+```
+
+Build for production:
+```bash
+npm run build
+```
+
+## 📦 Deploy
+
+This project is deployed via **GitHub Pages**.
+
+## 📌 Notes
+
+This project was built as a portfolio layout implementation with focus on:
+
+- pixel-perfect positioning
+- complex decorative elements (SVG + pseudo-elements)
+- hover animations and transitions
+- component-based structure
+- BEM-based CSS architecture
