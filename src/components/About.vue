@@ -451,6 +451,7 @@
   .team__member-avatar {
     width: 215px;
     height: 216px;
+    pointer-events: none;
   }
  
   .team__member-avatar--ceo::after {
