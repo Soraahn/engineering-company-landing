@@ -41,17 +41,17 @@
             <button
               @click="onLangClick('de')"
               class="navigation-bar__German-lang-btn navigation-bar__change-lang-button"
-              data-active="false"
+              :class="{'navigation-bar__change-lang-button--active' : currentLang === 'de'}"
             ><span>De.</span></button>
             <button
               @click="onLangClick('en')"
               class="navigation-bar__English-lang-btn navigation-bar__change-lang-button"
-              data-active="true"
+              :class="{'navigation-bar__change-lang-button--active' : currentLang === 'en'}"
             ><span>En.</span></button>
             <button
               @click="onLangClick('fr')"
               class="navigation-bar__French-lang-btn navigation-bar__change-lang-button"
-              data-active="false"
+              :class="{'navigation-bar__change-lang-button--active' : currentLang === 'fr'}"
             ><span>Fr.</span></button>
           </div>
         </div>
@@ -193,9 +193,8 @@
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
   }
-  .navigation-bar__change-lang-button[data-active="true"] span {
+  .navigation-bar__change-lang-button--active span {
     opacity: 100%;
-    
   }
   .navigation-bar__change-lang-button::before {
     content: '';
