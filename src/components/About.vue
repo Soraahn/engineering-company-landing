@@ -237,6 +237,7 @@
 <style scoped>
   .about {
     margin-top: 184px;
+    overflow-x: clip;
   }
   .about__values {
     display: flex;

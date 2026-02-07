@@ -62,6 +62,7 @@
 
 <style scoped>
   .footer {
+    overflow: clip;
     margin-top: 80px;
   }
   .footer::before {
@@ -76,6 +77,7 @@
     height: 400px;
     overflow: hidden;
     position: relative;
+    flex-shrink: 0;
   }
   .footer__main {
     margin-left: 2px;
