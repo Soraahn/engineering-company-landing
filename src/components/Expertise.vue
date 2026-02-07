@@ -92,7 +92,6 @@
     padding: 55px 37px;
     position: relative;
     border: solid 1px #E2E2E2;
-
   }
   .expertise__area * {
     position: relative;
@@ -114,6 +113,7 @@
     opacity: 1;
   }
   .expertise__area-index {
+    display: block;
     font-family: Mulish;
     font-weight: 800;
     font-size: 17px;
@@ -154,7 +154,7 @@
     background: url('@/assets/expertise/svg/area-index-icon-hover-centered.svg') no-repeat;
   }
   .expertise__area-text {
-    display: inline-block;
+    display: block;
     margin-top: 180px;
     font-family: Mulish;
     font-weight: 800;
